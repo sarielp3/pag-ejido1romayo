@@ -1,0 +1,20 @@
+<br>
+<div style="text-align: center;">
+<h1>NOTICIAS</h1>
+<hr />
+</div>
+
+
+<mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile id="noticia" *ngFor="let listNoticias of ListaNoticias">
+        <div>
+
+        
+          <img
+          height="170px"
+          src="{{ listNoticias.foto }}"
+        /><br>
+    <a [routerLink]="['/Consnoticia/' + listNoticias.idnoticia ]" >{{listNoticias.titulo}}</a>
+    </div>
+    </mat-grid-tile>
+  </mat-grid-list>

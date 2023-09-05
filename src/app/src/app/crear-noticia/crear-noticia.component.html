@@ -1,0 +1,10 @@
+<form [formGroup]="altaForm" (ngSubmit)="onSubmit()">
+<label>Titulo: <input formControlName="titulo" type="text"></label><br>
+<div id="desc">
+    <label >Descripcion: <textarea formControlName="descripcion" name="textarea" rows="10" cols="50"></textarea></label><br>
+</div>
+
+<label>Foto: <input formControlName="foto" (change) = "onFileChanged($event)" accept="image/x-png, image/gif, image/jpeg" type="file"></label>
+<br>
+<button mat-raised-button color="primary"  type="submit" [disabled]="!altaForm.valid">Guardar</button>
+</form>
